@@ -1,3 +1,16 @@
+---
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro'
+import '../styles/global.css'
+
+const navigationItems = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Contact', href: '/contact' }
+];
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,7 +21,9 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<Navbar navItems={navigationItems}/>
 		<slot />
+		<Footer />
 	</body>
 </html>
 
