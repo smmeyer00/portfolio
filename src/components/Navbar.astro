@@ -11,12 +11,12 @@ interface Props {
 const { navItems } = Astro.props;
 ---
 
-<nav class="fixed w-full bg-gray-900/95 backdrop-blur-sm z-50">
+<nav class="fixed w-full bg-background-900/95 backdrop-blur-sm z-50">
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
-      <a href="/" class="text-white font-bold text-xl">
-        {'</>'}<span class="text-purple-500">.</span>
+      <a href="/" class="text-foreground font-bold text-xl">
+        {'</>'}<span class="text-accent-500">.</span>
       </a>
 
       <!-- Desktop Menu -->
@@ -24,7 +24,7 @@ const { navItems } = Astro.props;
         {navItems.map(item => (
           <a
             href={item.href}
-            class="text-gray-300 hover:text-purple-500 transition-colors duration-300 font-semibold"
+            class="text-background-300 hover:text-accent-500 transition-colors duration-300 font-semibold"
           >
             {item.label}
           </a>
@@ -34,7 +34,7 @@ const { navItems } = Astro.props;
       <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-button"
-        class="md:hidden text-gray-300 hover:text-purple-500"
+        class="md:hidden text-background-300 hover:text-accent-500"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -48,7 +48,7 @@ const { navItems } = Astro.props;
       class="
         md:hidden 
         overflow-hidden 
-        bg-gray-800 
+        bg-background-800 
         fixed 
         top-0 
         left-0 
@@ -64,7 +64,7 @@ const { navItems } = Astro.props;
         <!-- Close Button -->
         <button
           id="mobile-menu-close"
-          class="absolute top-4 right-4 text-gray-300 hover:text-purple-500"
+          class="absolute top-4 right-4 text-background-300 hover:text-accent-500"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -72,15 +72,15 @@ const { navItems } = Astro.props;
         </button>
 
         <!-- Logo in menu -->
-        <a href="/" class="text-white font-bold text-xl mb-8 mt-2">
-          {'</>'}<span class="text-purple-500">.</span>
+        <a href="/" class="text-foreground font-bold text-xl mb-8 mt-2">
+          {'</>'}<span class="text-accent-500">.</span>
         </a>
 
         <div class="text-center font-bold">
             {navItems.map(item => (
                 <a
                   href={item.href}
-                  class="block py-3 text-gray-300 hover:text-purple-500 transition-colors duration-300 text-lg"
+                  class="block py-3 text-background-300 hover:text-accent-500 transition-colors duration-300 text-lg"
                 >
                   {item.label}
                 </a>

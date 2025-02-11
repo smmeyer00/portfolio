@@ -32,7 +32,7 @@ const socialLinks = [
 ];
 ---
 
-<footer class="bg-gray-900 text-gray-300 py-12 mt-auto">
+<footer class="bg-background-900 text-background-300 py-12 mt-auto">
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex flex-col items-center justify-center space-y-4">
       <div class="flex space-x-6">
@@ -41,14 +41,14 @@ const socialLinks = [
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="hover:text-purple-500 transition-colors duration-300"
+            class="hover:text-accent-500 transition-colors duration-300"
             aria-label={`Visit ${social.name}`}
           >
             <Fragment set:html={social.icon} />
           </a>
         ))}
       </div>
-      <div class="text-sm text-gray-400">
+      <div class="text-sm text-background-400">
         © {new Date().getFullYear()} Steven Meyer. All rights reserved.
       </div>
     </div>

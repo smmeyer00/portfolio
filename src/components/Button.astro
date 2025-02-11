@@ -10,14 +10,14 @@ const { href, onClick } = Astro.props;
 { href ? (
   <a
     href={href}
-    class="inline-block cursor-pointer bg-purple-500 text-white px-8 py-3 rounded-full hover:bg-purple-600 transition duration-300"
+    class="inline-block cursor-pointer bg-accent-500 text-foreground px-8 py-3 rounded-full hover:bg-accent-600 transition duration-300"
   >
     <slot></slot>
   </a>
 ) : (
   <button
     onclick={onClick}
-    class="cursor-pointer bg-purple-500 text-white px-8 py-3 rounded-full hover:bg-purple-600 transition duration-300"
+    class="cursor-pointer bg-accent-500 text-foreground px-8 py-3 rounded-full hover:bg-accent-600 transition duration-300"
   >
     <slot></slot>
   </button>
