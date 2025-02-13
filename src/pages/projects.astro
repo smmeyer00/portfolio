@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+// Dummy project data
+const projects = [
+	{
+		title: "Portfolio Website",
+		description:
+			"A modern, responsive portfolio website built with Astro and TailwindCSS. Features dynamic components and smooth animations.",
+		tags: ["Astro", "TailwindCSS", "TypeScript"],
+		image: "https://picsum.photos/800/600",
+		slug: "portfolio-website",
+	},
+	{
+		title: "E-Commerce Platform",
+		description:
+			"Full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.",
+		tags: ["React", "Node.js", "MongoDB"],
+		image: "https://picsum.photos/800/600?random=1",
+		slug: "ecommerce-platform",
+	},
+	{
+		title: "AI Chat Interface",
+		description:
+			"Modern chat interface for AI interactions, featuring stream responses, code highlighting, and conversation management.",
+		tags: ["Next.js", "OpenAI", "TailwindCSS"],
+		image: "https://picsum.photos/800/600?random=2",
+		slug: "ai-chat-interface",
+	},
+	{
+		title: "Weather Dashboard",
+		description:
+			"Real-time weather dashboard with interactive maps, forecast visualization, and location tracking.",
+		tags: ["Vue.js", "D3.js", "Weather API"],
+		image: "https://picsum.photos/800/600?random=3",
+		slug: "weather-dashboard",
+	},
+];
+---
+
+<BaseLayout pageTitle='Projects'>
+	<section class='min-h-screen pt-24 px-4 overflow-hidden'>
+		<div class='max-w-6xl mx-auto'>
+			<h1
+				class='text-4xl md:text-5xl font-bold text-foreground mb-6 text-center'>
+				My Projects
+			</h1>
+			<h2 class='text-2xl font-bold text-accent-500 mb-4 text-center'>
+			</h2>
+			<div class='mb-12 space-y-4'>
+				<p class='text-background-300 text-center max-w-2xl mx-auto'>
+					A collection of my recent work and side projects. Each
+					project represents different challenges and learning
+					experiences.
+				</p>
+				<p class='text-background-300 text-center max-w-2xl mx-auto'>
+					<i>
+						<span class='font-semibold'><u>Note</u>:</span> Page under
+						progress. All content is placeholder.
+					</i>
+				</p>
+			</div>
+
+			<div class='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8'>
+				{projects.map((project) => <ProjectCard {...project} />)}
+			</div>
+		</div>
+	</section>
+</BaseLayout>
